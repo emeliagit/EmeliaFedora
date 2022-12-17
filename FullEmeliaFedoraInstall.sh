@@ -19,9 +19,9 @@ skip_if_unavailable=True
 max_parallel_downloads=6
 defaultyes=True" >> /etc/dnf.conf
 # install some software I like to use, personally
-sudo dnf install lolcat alacritty fastfetch flatpak ark gnome-tweaks gnome-extensions-app fish zsh
+sudo dnf install utils-linux-user lolcat alacritty fastfetch flatpak ark gnome-tweaks gnome-extensions-app fish zsh
 # change default shell to Fish, as I like using Fish to interact with my OS. Bash for scripting, though. Fish sucks for scripting lol
-chsh -s /bin/fish
+chsh -s /bin/fish | lolcat
 #  add Flathub repository to Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # install some flatpaks I like 
