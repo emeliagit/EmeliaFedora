@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# welcome message, tell user what to expect
 echo "Hello! This little script here is gonna do some stuff, install some software to make your install of Fedora more complete and comfortable to install with little hassle."
 echo "Beware, this script does enable RPM Fusion's nonfree repository for drivers and whatnot, feel free to edit it to your liking. It will also require a root password, and your user password later to change your shell. Feel free to change that if you don't like it."
 # upgrade computer before doing anything
