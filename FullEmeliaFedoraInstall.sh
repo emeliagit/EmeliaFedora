@@ -19,7 +19,11 @@ skip_if_unavailable=True
 max_parallel_downloads=6
 defaultyes=True" >> /etc/dnf.conf
 # install some software I like to use, personally
-sudo dnf install utils-linux-user lolcat alacritty fastfetch flatpak ark gnome-tweaks gnome-extensions-app fish zsh
+sudo dnf install tlp tlp-rdw utils-linux-user lolcat alacritty fastfetch flatpak ark gnome-tweaks gnome-extensions-app fish zsh
+# enable TLP, mask/remove services it conflicts with. Delete if not on a laptop/don't want tlp
+sudo dnf remove power-profiles-daemon
+sudo systemctl enable tlp.service
+sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 # change default shell to Fish, as I like using Fish to interact with my OS. Bash for scripting, though. Fish sucks for scripting lol
 chsh -s /bin/fish | lolcat
 #  add Flathub repository to Flatpak
